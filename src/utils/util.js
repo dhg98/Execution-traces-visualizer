@@ -58,8 +58,8 @@ function processData(unprocessedData) {
 
         // Computation to get the root of the tree
         data.forEach(item => {
-            let parent = item.parent.toString();
-            let child = item.child.toString();
+            let parent = item.parent;
+            let child = item.child;
             (nodes[parent] = nodes[parent] || []).push(item);
 
             // Add child as a discarded root
@@ -79,7 +79,6 @@ function processData(unprocessedData) {
             alert(outStr);
             return [null, null];
         }
-
         // Tree map will contain for each node, the generated subtree. This 
         // will be very useful when filling with misc information
         const treeMap = {};
@@ -153,27 +152,31 @@ function processData(unprocessedData) {
         // Add states information
         if (states && states.length > 0) {
             states.forEach(item => {
-                if (item.vars) treeMap[item.nodeName].vars = item.vars;
-                if (item.properties && item.properties.length > 0) {
-                    treeMap[item.nodeName].stateProperties = item.properties;
+                if (treeMap[item.nodeName]) {
+                    if (item.vars) treeMap[item.nodeName].vars = item.vars;
+                    if (item.properties && item.properties.length > 0) {
+                        treeMap[item.nodeName].stateProperties = item.properties;
 
-                    item.properties.forEach(itemP => {
-                        if (!stateProperties.includes(itemP))
-                            stateProperties.push(itemP);
-                    });
+                        item.properties.forEach(itemP => {
+                            if (!stateProperties.includes(itemP))
+                                stateProperties.push(itemP);
+                        });
+                    }
+                    if (item.extra && item.extra.length > 0)
+                        treeMap[item.nodeName].nodeExtra = item.extra;
                 }
-                if (item.extra && item.extra.length > 0)
-                    treeMap[item.nodeName].nodeExtra = item.extra;
             });
         }
 
         // Add sets information
         if (sets && sets.length > 0) {
             sets.forEach(item => {
-                treeMap[item.nodeName][item.type] =
-                    (treeMap[item.nodeName][item.type] =
-                        treeMap[item.nodeName][item.type] || [])
-                    .concat(item.content);
+                if (treeMap[item.nodeName]) {
+                    treeMap[item.nodeName][item.type] =
+                        (treeMap[item.nodeName][item.type] =
+                            treeMap[item.nodeName][item.type] || [])
+                        .concat(item.content);
+                }
             });
         }
     };
