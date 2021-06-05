@@ -1,0 +1,52 @@
+.node,
+.fadedNode {
+    cursor: pointer;
+}
+
+.fadedNode {
+    opacity: 0.4;
+}
+
+.node .notExpanded,
+.fadedNode .notExpanded {
+    stroke: black;
+    stroke-width: 1.2;
+}
+
+.node .nodeText,
+.fadedNode .nodeText {
+    font: 10px sans-serif;
+    text-anchor: middle;
+    text-align: center;
+    dominant-baseline: central;
+}
+
+.node .execution,
+.fadedNode .execution {
+    pointer-events: none;
+    fill: black;
+    font-family: sans-serif;
+    text-anchor: middle;
+    text-align: center;
+    dominant-baseline: central;
+}
+
+.node .executionLabel,
+.fadedNode .executionLabel {
+    pointer-events: none;
+    fill: rgb(75, 75, 75);
+    font-family: sans-serif;
+    font-style: italic;
+    text-anchor: middle;
+    text-align: center;
+    dominant-baseline: central;
+}
+
+.node .varsText,
+.fadedNode .varsText {
+    pointer-events: none;
+    fill: rgb(44, 44, 44);
+    text-anchor: left;
+    text-align: center;
+    dominant-baseline: central;
+}

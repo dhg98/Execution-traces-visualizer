@@ -1,0 +1,26 @@
+div.tooltipSets,
+div.tooltipVars,
+div.tooltipExtra {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 3px;
+    background: rgb(86, 145, 221);
+    border: 0px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+div.tooltipLinks {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    padding: 3px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    pointer-events: none;
+}

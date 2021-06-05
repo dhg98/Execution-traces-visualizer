@@ -1,0 +1,32 @@
+.link,
+.dashed-link,
+.faded-link {
+    fill: none;
+}
+
+.dashed-link {
+    stroke-dasharray: 4;
+}
+
+.faded-link {
+    opacity: 0.1;
+}
+
+.linkLabel {
+    fill: black;
+    stroke: none;
+    font-family: sans-serif;
+    text-align: center;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.faded-linkLabel {
+    opacity: 0.3;
+    fill: black;
+    stroke: none;
+    font-family: sans-serif;
+    text-align: center;
+    text-anchor: middle;
+    dominant-baseline: central;
+}

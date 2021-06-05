@@ -1,0 +1,17 @@
+.btn-group button {
+    font: 20px arial;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-group {
+    /* Centered button at the bottom */
+    position: absolute;
+    bottom: 1px;
+    width: auto;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: nowrap;
+}

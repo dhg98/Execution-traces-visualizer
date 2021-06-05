@@ -1,0 +1,32 @@
+.bottomRightIconsDiv {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 38px;
+}
+
+/* Separation between SVGs, except from the last one */
+.bottomRightIconsDiv svg {
+    padding-bottom: 5px;
+    cursor: auto;
+}
+
+.bottomRightIconsDiv svg:last-child {
+    padding-bottom: 0px;
+}
+
+/* Tooltips that are shown for both icons when hovering */
+div.infoTooltip,
+div.helpTooltip {
+    position: absolute;
+    text-align: center;
+    max-width: 70%;
+    max-height: 100%;
+    padding: 5px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: auto;
+    /* Move to front attribute */
+    z-index: 1;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visualization of concurrent models</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <script src="./src/tree/treeConstants.js"></script>
+    <script src="./src/htmlElements/leftMenu.js"></script>
+    <script src="./src/htmlElements/bottomButtons.js"></script>
+    <script src="./src/htmlElements/bottomRightIcons.js"></script>
+    <script src="./src/htmlElements/htmlConstants.js"></script>
+    <script src="./src/tooltips/tooltipConstants.js"></script>
+    <script src="./src/tooltips/tooltipGenerator.js"></script>
+    <script src="./src/tooltips/tooltipEventHandler.js"></script>
+    <script src="./src/tree/treeTraverses.js"></script>
+    <script src="./src/tree/treeEfects.js"></script>
+    <script src="./src/tree/treeLegend.js"></script>
+    <script src="./src/utils/util.js"></script>
+    <script src="./src/main.js"></script>
+</head>
+
+<body>
+    <script>
+        let token = gup("token");
+        token = token ? `_${token}` : "";
+        visualize(`./tmp/data${token}.json`);
+    </script>
+</body>
+
+</html>

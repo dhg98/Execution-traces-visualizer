@@ -1,0 +1,220 @@
+{
+	"sets": [
+		{
+			"nodeName": "Nodo 2",
+			"type": "backtrackSet",
+			"content": [
+				"w.work"
+			]
+		},
+		{
+			"nodeName": "Nodo 2",
+			"type": "sleepSet",
+			"content": [
+				"db.register"
+			]
+		},
+		{
+			"nodeName": "Nodo 3",
+			"type": "backtrackSet",
+			"content": [
+				"w.work"
+			]
+		},
+		{
+			"nodeName": "Nodo 4",
+			"type": "sleepSet",
+			"content": [
+				"db.register"
+			]
+		}
+	],
+	"states": [
+		{
+			"nodeName": "Nodo 3",
+			"vars": {
+				"data": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 4",
+			"vars": {
+				"data": 8,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 5",
+			"vars": {
+				"data": 2,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 6",
+			"vars": {
+				"data": 28,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 7",
+			"vars": {
+				"data": 12
+			}
+		},
+		{
+			"nodeName": "Nodo 8",
+			"vars": {
+				"data": 6,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 9",
+			"vars": {
+				"data": 17
+			}
+		},
+		{
+			"nodeName": "Nodo 10",
+			"vars": {
+				"data": 4
+			}
+		},
+		{
+			"nodeName": "Nodo 11",
+			"vars": {
+				"data": 20,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 12",
+			"vars": {
+				"data": 12
+			}
+		},
+		{
+			"nodeName": "Nodo 13",
+			"vars": {
+				"data": 0,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+		{
+			"nodeName": "Nodo 14",
+			"vars": {
+				"data": 14,
+				"data2": 1,
+				"data3": 1,
+				"data4": 1
+			}
+		},
+      	{
+			"nodeName": "Nodo 15",
+			"vars": {
+				"data": -4
+			}
+		}
+	],
+	"edges": [
+		{
+			"parent": "Nodo 1",
+			"child": "Nodo 2",
+			"label": "main"
+		},
+		{
+			"parent": "Nodo 2",
+			"child": "Nodo 3",
+			"label": "db.register"
+		},
+		{
+			"parent": "Nodo 2",
+			"child": "Nodo 4",
+			"label": "w.work"
+		},
+		{
+			"parent": "Nodo 3",
+			"child": "Nodo 5",
+			"label": "w.ping"
+		},
+		{
+			"parent": "Nodo 3",
+			"child": "Nodo 6",
+			"label": "w.work"
+		},
+		{
+			"parent": "Nodo 5",
+			"child": "Nodo 8",
+			"label": "w.work"
+		},
+		{
+			"parent": "Nodo 8",
+			"child": "Nodo 10",
+			"label": "db.register(2)"
+		},
+		{
+			"parent": "Nodo 10",
+			"child": "Nodo 12",
+			"label": "db.getData"
+		},
+		{
+			"parent": "Nodo 12",
+			"child": "Nodo 14",
+			"label": "w.work(2)"
+		},
+		{
+			"parent": "Nodo 4",
+			"child": "Nodo 7",
+			"label": "db.getData"
+		},
+		{
+			"parent": "Nodo 7",
+			"child": "Nodo 9",
+			"label": "db.register"
+		},
+		{
+			"parent": "Nodo 9",
+			"child": "Nodo 11",
+			"label": "w.work(2)"
+		},
+		{
+			"parent": "Nodo 11",
+			"child": "Nodo 13",
+			"label": "w.ping"
+		},
+		{
+			"parent": "Nodo 13",
+			"child": "Nodo 15",
+			"label": "db.register(2)"
+		}
+	],
+	"executions": [
+		{
+			"executionName": "Exec. 1",
+			"executionLeaf": "Nodo 14"
+		},
+		{
+			"executionName": "Exec. 2",
+			"executionLabel": "Deadlock",
+			"executionLeaf": "Nodo 6"
+		},
+		{
+			"executionName": "Exec. 3",
+			"executionLeaf": "Nodo 15"
+		}
+	]
+}

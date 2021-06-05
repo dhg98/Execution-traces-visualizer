@@ -1,0 +1,20 @@
+.legendContainer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    outline: solid 0.6mm black;
+    overflow: auto;
+    cursor: auto;
+    display: block;
+}
+
+.legendDiv {
+    position: absolute;
+    cursor: auto;
+}
+
+.legendDiv svg text {
+    dominant-baseline: central;
+    font: 16px sans-serif;
+}
