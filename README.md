@@ -33,8 +33,9 @@
 
     6.8. [Trace selector](#trace-selector)
 
-7. [License](#license)
-8. [Credits](#credits)
+7. [Project structure](#project-structure)
+8. [License](#license)
+9. [Credits](#credits)
 
 ----
 <div id='current-appearance'></div>
@@ -341,14 +342,38 @@ When there are multiple actors, it becomes very difficult to differentiate all o
 ### 6.8. Trace selector
 When there are a lot of executions, it becomes difficult for the browser to handle all of them, causing lag perceptible for the user. For that reason, it becomes extremely important to allow the user to limit the number of executions that are being shown, so that the experience of using the visualizer is improved. For that reason, at the top left of the screen we allow the user to select the interval of executions that it wants to be shown, and the one that's at the left and at the right of that interval (if they exist) will be shown more transparent.
 
+<div id='project-structure'></div>
+
+## 7. Project structure
+The project is structured in the following folders and files:
+
+* [examples](https://github.com/dhg98/Execution-traces-visualizer/tree/master/examples): folder that contains some JSON examples ready to use that have been outputted by SYCO.
+
+* [img](https://github.com/dhg98/Execution-traces-visualizer/tree/master/img): folder that contains images that show the posibilities of the visualizer
+
+* [src](https://github.com/dhg98/Execution-traces-visualizer/tree/master/src): folder that contains all the JavaScript code of the visualizer
+
+* [style](https://github.com/dhg98/Execution-traces-visualizer/tree/master/style): folder that contains all the CSS code of the visualizer
+
+* [tmp](https://github.com/dhg98/Execution-traces-visualizer/tree/master/tmp): folder that is used to integrate SYCO and the visualizer by using EasyInterface. EasyInterface will save in this folder the JSON with the information the visualizer will use to display the tree. This folder should have 0777 permissions to work as expected.
+
+* [index.html](https://github.com/dhg98/Execution-traces-visualizer/blob/master/index.html): HTML file in which all the objects will be embedded.
+
+* [README.md](https://github.com/dhg98/Execution-traces-visualizer/blob/master/README.md): Markdown file that contains all the project information.
+
+* [LICENSE](https://github.com/dhg98/Execution-traces-visualizer/blob/master/LICENSE): Plain text file that contains the license statement for this project.
+
+* [CREDITS.md](https://github.com/dhg98/Execution-traces-visualizer/blob/master/CREDITS.md): Markdown file that contains all the references I have used during the implementation of the visualizer, including tutorials and Stack Overflow questions, with the proper attributions.
+
+
 <div id='license'></div>
 
-## 7. License
+## 8. License
 See ![LICENSE](https://github.com/dhg98/Execution-traces-visualizer/blob/master/LICENSE) file for more information.
 
 
 
 <div id='credits'></div>
 
-## 8. Credits
+## 9. Credits
 See ![CREDITS.md](https://github.com/dhg98/Execution-traces-visualizer/blob/master/CREDITS.md) file for more information.
