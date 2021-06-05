@@ -72,27 +72,21 @@ D3 way to read JSON file is by using promises (see [this link](https://www.w3sch
 
 2. Download this package by running the command
 
-    `svn checkout https://costa.fdi.ucm.es/svn/Systems/tfg-daniel`
+    `git clone https://github.com/dhg98/Execution-traces-visualizer.git`
 
-3. Go to the code folder by running 
-
-    `cd /tfg-daniel/code`
-
-    Inside this folder there is all the code that has been developed for the project.
-
-4. Give all permissions to `./tmp` folder by running
+3. Give all permissions to `./tmp` folder by running
 
     `chmod 0777 /tmp`
 
-5. Execute the command
+4. Execute the command
 
     `http-server -p 5000`
 
     By doing so, we will create a HTTP server in port 5000.
 
-6. Type `localhost:5000` in the search bar of your browser.
+5. Type `localhost:5000` in the search bar of your browser.
 
-7. You should see a nice dynamic tree that can be expanded and collapsed, zoomed, etc. If not, that's because `data.json` in `./tmp` folder doesn't exist or has the wrong structure. Fix that issue and reload the page to see the tree.
+6. You should see a nice dynamic tree that can be expanded and collapsed, zoomed, etc. If not, that's because `data.json` in `./tmp` folder doesn't exist or has the wrong structure. Fix that issue and reload the page to see the tree.
 
 
 <div id='input'></div>
