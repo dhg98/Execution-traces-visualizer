@@ -1,44 +1,51 @@
 <h1>VISUALIZATION AND ANALYSIS OF EXECUTION TRACES OF CONCURRENT MODELS</h1>
 
 <b>Index</b>
-1. [Motivation](#motivation)
-2. [Installation](#installation)
+1. [Current appearance](#current-appearance)
+2. [Motivation](#motivation)
+3. [Installation](#installation)
     
-    2.1. [Configuration of HTTP-Server](#config-http)
+    3.1. [Configuration of HTTP-Server](#config-http)
     
-    2.2. [Configuration of visualizer tool](#configuration-visualizer-tool)
+    3.2. [Configuration of visualizer tool](#configuration-visualizer-tool)
 
-3. [Visualizer input](#input)
-4. [Tool usage](#usage)
+4. [Visualizer input](#input)
+5. [Tool usage](#usage)
 
-    4.1. [Standalone component](#standalone-component)
+    5.1. [Standalone component](#standalone-component)
 
-    4.2. [Aditional component of SYCO](#aditional-component)
-5. [Tool features](#features)
+    5.2. [Aditional component of SYCO](#aditional-component)
+6. [Tool features](#features)
 
-    5.1. [Commands over nodes](#commands-nodes)
+    6.1. [Commands over nodes](#commands-nodes)
 
-    5.2. [Tooltips over objects](#tooltips-objects)
+    6.2. [Tooltips over objects](#tooltips-objects)
 
-    5.3. [Buttons for exploring the tree](#buttons-tree)
+    6.3. [Buttons for exploring the tree](#buttons-tree)
 
-    5.4. [Zooming and panning](#zooming)
+    6.4. [Zooming and panning](#zooming)
 
-    5.5. [Property highlight](#property-highlight)
+    6.5. [Property highlight](#property-highlight)
 
-    5.6. [Variable display](#variable-display)
+    6.6. [Variable display](#variable-display)
 
-    5.7. [Legend for actors](#legend-actors)
+    6.7. [Legend for actors](#legend-actors)
 
-    5.8. [Trace selector](#trace-selector)
+    6.8. [Trace selector](#trace-selector)
 
-6. [License](#license)
-7. [Credits](#credits)
+7. [License](#license)
+8. [Credits](#credits)
 
 ----
+<div id='current-appearance'></div>
+
+# 1. Current appearance
+The actual state of the visualizer can be seen in the following image
+![visualizer](https://github.com/dhg98/Execution-traces-visualizer/blob/master/img/visualizer.png)
+
 <div id='motivation'></div>
 
-## 1. Motivation
+## 2. Motivation
 SYCO (<i>Systematic texting tool for Concurrent Objects</i>) is a tool used to analyze concurrent programs based on specific execution parameters, and gives as output all the possible interleavings in the program (traces), together with the sequence of actions or tasks that are needed to reach each of the final states. These actions are executed by specific workers that could look alike objects in object oriented programming, and whose methods would be the tasks of which we spoke before.
 
 This tool is very useful to analyze concurrent programs because the process of testing them is much more complicated than testing sequential programs (considering that there are lots of potential risks such as deadlocks, race conditions or livelocks), even more when the program grows because it becomes very difficult to consider all the possible interleavings of a concurrent program manually.
@@ -53,11 +60,11 @@ This project intends to display all of these execution traces based on SYCO outp
 
 <div id='installation'></div>
 
-## 2. Installation
+## 3. Installation
 
 <div id='config-http'></div>
 
-### 2.1. Configuration of HTTP-Server
+### 3.1. Configuration of HTTP-Server
 D3 way to read JSON file is by using promises (see [this link](https://www.w3schools.com/js/js_promise.asp)). For that reason, it needs to use HTTP protocol (otherwise, the file won't be opened), so we need to configure a HTTP Server. The steps are the following:
 
 1. Install <b>Node.js</b> in your system following [this tutorial](https://www.geeksforgeeks.org/installation-of-node-js-on-linux/).
@@ -66,7 +73,7 @@ D3 way to read JSON file is by using promises (see [this link](https://www.w3sch
 
 <div id='configuration-visualizer-tool'></div>
 
-### 2.2. Configuration of visualizer tool
+### 3.2. Configuration of visualizer tool
 
 1. Go to the folder where you want to download the package to.
 
@@ -91,7 +98,7 @@ D3 way to read JSON file is by using promises (see [this link](https://www.w3sch
 
 <div id='input'></div>
 
-## 3. Visualizer input
+## 4. Visualizer input
 As it has already been said, input data is given by using a JSON file with a fixed structure. In this section we will try to explain a bit what's the structure of that JSON file. For real examples of JSON files, see `./examples` folder.
 
 ```
@@ -196,7 +203,7 @@ After we have seen the complete structure of the file, we will explain further w
 
 <div id='usage'></div>
 
-## 4. Tool usage
+## 5. Tool usage
 There are two different ways of using the project. As a standalone component or as an aditional component for SYCO.
 
 In both cases, our HTML recognizes an extra word that is introduced in the search bar after the direction, which is <i>token</i>. If this word is provided, the visualizer will try to open the `data.json` file that has as name suffix the provided token.
@@ -205,14 +212,14 @@ Please notice that the JSON file is expecting some fields, so everything differe
 
 <div id='standalone-component'></div>
 
-### 4.1. Standalone component
+### 5.1. Standalone component
 After installation, just edit the `data.json` file with the corresponding suffix located in the `./tmp` folder and reload the browser. Check that the <i>token</i> field matches the suffix of the JSON file you have created. If not, please create it before trying reloading the browser again.
 
 For example, if you add `?token=1234`, the visualizer will try to match that name with a JSON file inside `./tmp` folder named `data_1234.json`. If this file doesn't exist, nothing will be displayed. If no token is provided, the visualizer will use the `data.json` file.
 
 <div id='aditional-component'></div>
 
-### Aditional component of SYCO
+### 5.2. Aditional component of SYCO
 In order to combine SYCO with the visualizer, we will use Easy Interface (information about the project can be seen [here](https://github.com/abstools/easyinterface)). First of all, we need to install EI correctly following the steps of [this tutorial](https://github.com/abstools/easyinterface/blob/master/INSTALL.md). 
 
 Once that is done, we need to enable Apache. To do so, we will do the following:
@@ -239,12 +246,12 @@ Once all these steps have been followed, we should be ready to configure EI to e
 
 <div id='features'></div>
 
-## 5. Tool features
+## 6. Tool features
 As it has already been said, this project creates a visual view of trees using D3 with some remarkable features
 
 <div id='commands-nodes'></div>
 
-### 5.1. Commands over nodes
+### 6.1. Commands over nodes
 Each node has some commands available to explore the tree. They are:
 
 * Hold <b>Shift</b> + <b>Click</b> over node: expand one path in the subtree generated by a given node (if there is any available).
@@ -265,7 +272,7 @@ Each node has some commands available to explore the tree. They are:
 
 <div id='tooltips-objects'></div>
 
-### 5.2. Tooltips over objects
+### 6.2. Tooltips over objects
 Not all the information can be shown in the tree. For that reason, some information is hidden in tooltips, waiting for you to hover over with the right command. Note that if these fields are not provided in input file, no tooltip will be shown. Available tooltips are:
 
 * <b>Hover over node</b>: show information about <i>backtrack set</i> and <i>sleep set</i> for that node.
@@ -280,7 +287,7 @@ Not all the information can be shown in the tree. For that reason, some informat
 
 <div id='buttons-tree'></div>
 
-### 5.3. Buttons for exploring the tree
+### 6.3. Buttons for exploring the tree
 Commands over nodes are very useful. But sometimes, it comes very difficult to use them over the right node. For that reason, we also added some buttons that achieve the same objective. These are:
 
 * <b>Expand one path</b>: expands one path in the tree from the root.
@@ -297,7 +304,7 @@ Commands over nodes are very useful. But sometimes, it comes very difficult to u
 
 <div id='zooming'></div>
 
-### 5.4. Zooming and panning
+### 6.4. Zooming and panning
 Trees are arbitrarily big, so we need to have a way to take in and off the stage the nodes we want. For that reason, we have:
 
 * Use <b>mousewheel</b> (pressing <i>Ctrl</i> key is optional, and will apply zoom faster): zooms in and out the tree.
@@ -308,7 +315,7 @@ Trees are arbitrarily big, so we need to have a way to take in and off the stage
 
 <div id='property-highlight'></div>
 
-### 5.5. Property highlight
+### 6.5. Property highlight
 SYCO has a feature that tells us which are the nodes that hold some state property, and which are the executions that hold some execution property. For that reason, we allow the user to select these two different type of properties separately, by using a drop down box selection. In both cases, <i>None</i> represents that no property has been selected.
 
 * In the case of the <b>execution property selection</b>, we will highlight the paths that hold a specific property by changing the color of the edges to red.
@@ -321,25 +328,27 @@ SYCO has a feature that tells us which are the nodes that hold some state proper
 
 <div id='variable-display'></div>
 
-### 5.6. Variable display
+### 6.6. Variable display
 Tooltips for variables are not always sufficient, i.e. if we want to explore their values over different nodes at the same time. For that reason, we allow the user to select variables attached to each actor (up to 2) in a menu composed by checkboxes that is hidden and shown by clicking over a button that acts as a switch.
 
 <div id='legend-actors'></div>
 
-### 5.7. Legend for actors
+### 6.7. Legend for actors
 When there are multiple actors, it becomes very difficult to differentiate all of them. For that reason, a legend has been added, just like we have in charts. It is interactive, so that we can hover or click over the boxes or the text to highlight or hide/show the nodes, respectively.
 
 <div id='trace-selector'></div>
 
-### 5.8. Trace selector
+### 6.8. Trace selector
 When there are a lot of executions, it becomes difficult for the browser to handle all of them, causing lag perceptible for the user. For that reason, it becomes extremely important to allow the user to limit the number of executions that are being shown, so that the experience of using the visualizer is improved. For that reason, at the top left of the screen we allow the user to select the interval of executions that it wants to be shown, and the one that's at the left and at the right of that interval (if they exist) will be shown more transparent.
 
 <div id='license'></div>
 
-## 6. License
-See LICENSE file for more information.
+## 7. License
+See ![LICENSE](https://github.com/dhg98/Execution-traces-visualizer/blob/master/LICENSE) file for more information.
+
+
 
 <div id='credits'></div>
 
-## 7. Credits
-See CREDITS.md file for more information.
+## 8. Credits
+See ![CREDITS.md](https://github.com/dhg98/Execution-traces-visualizer/blob/master/CREDITS.md) file for more information.
