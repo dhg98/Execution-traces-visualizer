@@ -111,6 +111,16 @@
 
     I used this example to learn what were the available fields for this input type.
 
+- [Building legends in d3.js](https://www.d3-graph-gallery.com/graph/custom_legend.html#)
+
+    I used this tutorial to learn how to create a legend in D3.js. 
+
+    ----
+    <h3>Copyright notice</h3>
+    This tutorial doesn't have a license, but I asked the creator for permission and he gave it to me. In the following screenshot you can see the emails that we sent to each other
+
+    ![copyright](https://github.com/dhg98/Execution-traces-visualizer/blob/master/img/copyright/legend_copyright.png)
+
 ## Stack Overflow questions
 
 1. [What does the syntax d._children = d.children; stand for in d3.js?](https://stackoverflow.com/questions/20940896/what-does-the-syntax-d-children-d-children-stand-for-in-d3-js/)
