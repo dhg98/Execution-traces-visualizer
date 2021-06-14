@@ -1,0 +1,63 @@
+{
+     "sets": [
+        {     "nodeName":   0,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.maain"     ]},
+        {     "nodeName":   1,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.q"     ]},
+        {     "nodeName":   2,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.s"     ]},
+        {     "nodeName":   3,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.r"     ]},
+        {     "nodeName":   2,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.r"     ]},
+        {     "nodeName":   3,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.s"     ]},
+        {     "nodeName":   1,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.s"     ]},
+        {     "nodeName":   2,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.q"     ]},
+        {     "nodeName":   6,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.r"     ]},
+        {     "nodeName":   6,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.q"     ]},
+        {     "nodeName":   1,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.r"     ]},
+        {     "nodeName":   9,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.s"     ]},
+        {     "nodeName":   9,     "type":   "backtrackSet",     "content": [  "1:ProcessImp.q"     ]}
+     ],
+     "states": [
+        {     "nodeName":   1,     "properties":  [],                         
+     "vars": {"x": "2","o": "-1","m": "-1" } },
+        {     "nodeName":   2,     "properties":  [],                         
+     "vars": {"x": "1","o": "-1","m": "-1" } },
+        {     "nodeName":   3,     "properties":  [],                         
+     "vars": {"x": "1","o": "-1","m": "-1" } },
+        {     "nodeName":   6,     "properties":  [],                         
+     "vars": {"x": "1","o": "-1","m": "-1" } },
+        {     "nodeName":   9,     "properties":  [],                         
+     "vars": {"x": "1","o": "2","m": "-1" } },
+        {     "nodeName":   4,     "properties":  [],                         
+     "vars": {"x": "1","o": "1","m": "-1" } },
+        {     "nodeName":   5,     "properties":  [],                         
+     "vars": {"x": "1","o": "1","m": "-1" } },
+        {     "nodeName":   7,     "properties":  [],                         
+     "vars": {"x": "1","o": "1","m": "-1" } },
+        {     "nodeName":   8,     "properties":  [],                         
+     "vars": {"x": "1","o": "1","m": "-1" } },
+        {     "nodeName":   10,     "properties":  [],                         
+     "vars": {"x": "1","o": "2","m": "-1" } },
+        {     "nodeName":   11,     "properties":  [],                         
+     "vars": {"x": "1","o": "2","m": "-1" } }
+     ],
+     "edges": [
+        {     "parent":   0,     "child":   1,     "label":   "1:ProcessImp.maain"     },
+        {     "parent":   1,     "child":   2,     "label":   "1:ProcessImp.q"     },
+        {     "parent":   2,     "child":   3,     "label":   "1:ProcessImp.s"     },
+        {     "parent":   3,     "child":   4,     "label":   "1:ProcessImp.r"     },
+        {     "parent":   3,     "child":   5,     "label":   "1:ProcessImp.s"     },
+        {     "parent":   2,     "child":   6,     "label":   "1:ProcessImp.q"     },
+        {     "parent":   6,     "child":   7,     "label":   "1:ProcessImp.r"     },
+        {     "parent":   6,     "child":   8,     "label":   "1:ProcessImp.q"     },
+        {     "parent":   2,     "child":   9,     "label":   "1:ProcessImp.q"     },
+        {     "parent":   9,     "child":   10,     "label":   "1:ProcessImp.s"     },
+        {     "parent":   9,     "child":   11,     "label":   "1:ProcessImp.q"     }
+     ],
+     "executions": [
+        {     "executionName":   1,     "executionLabel": "ok",     "executionLeaf":  4,     "properties":  []     },
+        {     "executionName":   2,     "executionLabel": "ok",     "executionLeaf":  5,     "properties":  []     },
+        {     "executionName":   3,     "executionLabel": "ok",     "executionLeaf":  7,     "properties":  []     },
+        {     "executionName":   4,     "executionLabel": "ok",     "executionLeaf":  8,     "properties":  []     },
+        {     "executionName":   5,     "executionLabel": "ok",     "executionLeaf":  10,     "properties":  []     },
+        {     "executionName":   6,     "executionLabel": "ok",     "executionLeaf":  11,     "properties":  []     }
+     ],
+     "info": "           Number of executions: 6 <br/>          Total time: 6 ms <br/>           Total number of states explored during 6 executions: 11 <br/>           Total number of tasks executed during 6 executions: 4 <br/>          "
+}
